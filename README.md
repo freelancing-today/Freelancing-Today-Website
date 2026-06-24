@@ -5,7 +5,7 @@ A lightweight, single-page marketing website for a freelance web service brand.
 ## Project Structure
 
 - `index.html` – page structure and content sections
-- `Styles.css` – visual styling, layout, and responsive rules
+- `Styles.css` (capital `S`) – visual styling, layout, and responsive rules
 - `script.js` – UI behavior (scroll nav state, reveal animations, counters, and contact form feedback)
 
 ## Run Locally
