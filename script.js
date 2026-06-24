@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.contact-form');
     const formNote = document.querySelector('.form-note');
 
+    revealItems.forEach((item, index) => {
+        item.dataset.delay = String((index % 3) + 1);
+    });
+
     const syncNav = () => {
         nav.classList.toggle('is-scrolled', window.scrollY > 10);
     };
