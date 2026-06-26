@@ -36,7 +36,7 @@ This project uses plain HTML, CSS, and JavaScript with no build step.
 ## Notes
 
 - No package manager or test runner is configured in this repository.
-- External dependencies are loaded via CDN in `index.html` (Bootstrap, jQuery, Popper, Google Fonts).
+- External dependencies are loaded via CDN in `index.html` (Bootstrap, jQuery, Popper, Google Fonts)...
 
 ## Author
 
