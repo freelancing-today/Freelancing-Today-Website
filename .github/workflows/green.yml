@@ -14,10 +14,13 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Make a daily commit
+        env:
+          NOREPLY_EMAIL: ${{ secrets.NOREPLY_EMAIL }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
         run: |
-          git config user.email "freelancingtoday.info@gmail.com"
-          git config user.name "freelancing-today"
+          git config user.email "$NOREPLY_EMAIL"
+          git config user.name "$GH_USERNAME"
           echo "$(date)" >> log.txt
           git add .
-          git commit -m "daily update $(date)"
+          git commit -m "daily update $(date)" || echo "no changes to commit"
           git push
