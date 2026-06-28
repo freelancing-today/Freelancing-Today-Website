@@ -1,0 +1,23 @@
+name: Daily Green
+
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Make a daily commit
+        run: |
+          git config user.email "freelancingtoday.info@gmail.com"
+          git config user.name "freelancing-today"
+          echo "$(date)" >> log.txt
+          git add .
+          git commit -m "daily update $(date)"
+          git push
